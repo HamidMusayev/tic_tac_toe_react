@@ -1,91 +1,118 @@
+/* Reset and box-sizing */
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: sans-serif;
-    margin: 20px;
-    padding: 0;
-  }
-  
-  h1 {
-    margin-top: 0;
-    font-size: 22px;
-  }
-  
-  h2 {
-    margin-top: 0;
-    font-size: 20px;
-  }
-  
-  h3 {
-    margin-top: 0;
-    font-size: 18px;
-  }
-  
-  h4 {
-    margin-top: 0;
-    font-size: 16px;
-  }
-  
-  h5 {
-    margin-top: 0;
-    font-size: 14px;
-  }
-  
-  h6 {
-    margin-top: 0;
-    font-size: 12px;
-  }
-  
-  code {
-    font-size: 1.2em;
-  }
-  
-  ul {
-    padding-inline-start: 20px;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: sans-serif;
-    margin: 20px;
-    padding: 0;
-  }
-  
-  .square {
-    background: #fff;
-    border: 1px solid #999;
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 34px;
-  }
-  
-  .board-row:after {
-    clear: both;
-    content: '';
-    display: table;
-  }
-  
-  .status {
-    margin-bottom: 10px;
-  }
-  .game {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .game-info {
-    margin-left: 20px;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 20px;
+  background-color: #f2f2f2;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: bold;
+  color: #333;
+  /* Dark text color */
+}
+
+h1 {
+  font-size: 32px;
+  /* Larger font size for h1 */
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+/* Code styling */
+code {
+  font-size: 1rem;
+  background-color: #f7f7f7;
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #333;
+  /* Dark text color */
+}
+
+/* Lists */
+ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Game board styles */
+.square {
+  background: #fff;
+  border: 1px solid #ddd;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.square:hover {
+  background-color: #eee;
+  /* Slightly lighter color on hover */
+  cursor: pointer;
+}
+
+.board-row::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/* Game status and info */
+.status {
+  margin-bottom: 10px;
+  font-size: 24px;
+  /* Larger font size for status */
+  font-weight: bold;
+  color: #333;
+  /* Dark text color */
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.game-info {
+  margin-left: 20px;
+}

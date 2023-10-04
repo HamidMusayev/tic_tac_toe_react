@@ -1,10 +1,10 @@
-import Board from "./templates/board";
 import Counter from "./components/counter";
+import Game from "./containers/game";
 
 function App() {
   return (
     <>
-      <Board />
+      <Game />
       <br />
       <Counter />
     </>
