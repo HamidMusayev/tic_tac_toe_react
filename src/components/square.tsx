@@ -1,8 +1,8 @@
-interface SquareTypeDef { value: string, onSquareClick: (i: number) => void }
+interface SquareTypeDef { value: string, onSquareClick: (i: number | null) => void }
 
 export default function Square({ value, onSquareClick }: SquareTypeDef) {
   return (
-    <button className="square" onClick={() => onSquareClick}>
+    <button className="square" onClick={() => onSquareClick(null)}>
       {value}
     </button>
   );
