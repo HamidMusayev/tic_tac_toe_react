@@ -3,11 +3,11 @@ import { useState } from "react";
 export default function Counter() {
   const [counter, setCount] = useState<number>(0);
 
-  function increaseClick() {
+  function increaseClick(): void {
     setCount(counter + 1);
   }
 
-  function decreaseClick() {
+  function decreaseClick(): void {
     setCount(counter - 1);
   }
 

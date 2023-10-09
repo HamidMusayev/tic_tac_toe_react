@@ -3,7 +3,7 @@ import Square from "../components/square";
 interface BoardTypeDef { xIsNext: boolean, squares: Array<string>, onPlay: (squares: Array<string>) => void }
 
 export default function Board({ xIsNext, squares, onPlay }: BoardTypeDef) {
-  const winner = calculateWinner(squares);
+  const winner : string | null = calculateWinner(squares);
 
   let status;
   if (winner) {
@@ -12,11 +12,11 @@ export default function Board({ xIsNext, squares, onPlay }: BoardTypeDef) {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
-  function handleClick(i: number) {
+  function handleClick(i: number):void {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
-    const nextSquares = squares.slice();
+    const nextSquares: string[] = squares.slice();
     if (xIsNext) {
       nextSquares[i] = "X";
     } else {
@@ -25,8 +25,8 @@ export default function Board({ xIsNext, squares, onPlay }: BoardTypeDef) {
     onPlay(nextSquares);
   }
 
-  function calculateWinner(squares: Array<string>) {
-    const lines = [
+  function calculateWinner(squares: Array<string>) :string | null {
+    const lines  = [
       [0, 1, 2],
       [3, 4, 5],
       [6, 7, 8],
